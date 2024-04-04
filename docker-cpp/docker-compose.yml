@@ -1,0 +1,16 @@
+
+services:
+  compiler:
+    build:
+      context: .
+      dockerfile: clang.dockerfile
+      # dockerfile: gcc.dockerfile
+      args:
+        WORKDIR: $WORKDIR
+    image: cpplogs
+    # container_name: $CONTAINER_NAME
+    hostname: container-$COMPOSE_PROJECT_NAME
+    volumes:
+      - "../cpplogs:/$WORKDIR/cpplogs"
+      - "../example:/$WORKDIR/example"
+    tty: true
