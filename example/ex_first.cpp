@@ -61,8 +61,6 @@ int main() {
         // (Until use clean() or finish program.)
         w("Write to out.txt. (2)").n();
     }
-
-    Debug::log(Logs::Random::get_str_with_spacer(4, 3, ".")).n();
     
 
 }
